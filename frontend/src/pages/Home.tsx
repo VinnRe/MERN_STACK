@@ -1,5 +1,3 @@
-// FIX AFTER FORM SUBMIT IT WILL AUTO ADD IT TO THE DISPLAY WITHOUT REFRESHING MANUALLY
-
 import { useEffect } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
@@ -11,6 +9,7 @@ interface Workout {
     title: string
     load: number
     reps: number
+    createdAt: string
 }
 
 const Home = () => {
