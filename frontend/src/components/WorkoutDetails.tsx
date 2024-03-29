@@ -1,5 +1,6 @@
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import '../fonts/fonts.css'
+import { formatDistanceToNow } from "date-fns";
 
 interface Workout {
     _id: string
@@ -32,7 +33,7 @@ const WorkoutDetails = ({ workout }: WorkoutDetailsProps) => {
             <h4>{workout.title}</h4>
             <p><strong>Load (kg): </strong> {workout.load}</p>
             <p><strong>Reps: </strong> {workout.reps}</p>
-            <p>{workout.createdAt}</p>
+            <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
             <span onClick={handleClick} className="material-icons">delete</span>
         </div>
     )
