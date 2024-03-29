@@ -1,4 +1,5 @@
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import '../fonts/fonts.css'
 
 interface Workout {
     _id: string
@@ -32,7 +33,7 @@ const WorkoutDetails = ({ workout }: WorkoutDetailsProps) => {
             <p><strong>Load (kg): </strong> {workout.load}</p>
             <p><strong>Reps: </strong> {workout.reps}</p>
             <p>{workout.createdAt}</p>
-            <span onClick={handleClick}>Delete</span>
+            <span onClick={handleClick} className="material-icons">delete</span>
         </div>
     )
 }
